@@ -1330,6 +1330,44 @@ body {
     color: #cccccc;
 }
 
+.member-social {
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(0, 127, 255, 0.1);
+    border: 1px solid rgba(0, 127, 255, 0.2);
+    border-radius: 50%;
+    color: #007fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.social-icon:hover {
+    background: #007fff;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 127, 255, 0.3);
+    border-color: #007fff;
+}
+
+.social-icon svg {
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover svg {
+    transform: scale(1.1);
+}
+
 .stat {
     text-align: center;
     padding: 2rem 1.5rem;
@@ -1778,10 +1816,35 @@ section.visible {
 }
 
 .progress-text {
-    font-size: 0.9rem;
-    color: #b3b3b3;
-    font-weight: 500;
+    font-size: 1.2rem;
+    color: #007fff;
+    font-weight: 700;
     text-align: center;
+    text-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
+    transition: all 0.3s ease;
+    letter-spacing: 0.5px;
+}
+
+.progress-text.complete {
+    color: #007fff;
+    text-shadow: 0 0 15px rgb(52, 147, 255);
+    transform: scale(1.1);
+    animation: completeGlow 0.5s ease-out;
+}
+
+@keyframes completeGlow {
+    0% {
+        transform: scale(1);
+        text-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
+    }
+    50% {
+        transform: scale(1.2);
+        text-shadow: 0 0 20px rgba(0, 255, 136, 1);
+    }
+    100% {
+        transform: scale(1.1);
+        text-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
+    }
 }
 
 .loader-background {

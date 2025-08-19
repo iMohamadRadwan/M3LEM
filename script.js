@@ -145,10 +145,11 @@ document.addEventListener('DOMContentLoaded', function() {
         const loader = document.querySelector('.page-loader');
         
         // Ensure progress reaches 100%
-        if (progressFill && progressText) {
-            progressFill.style.width = '100%';
-            progressText.textContent = '100%';
-        }
+    if (progressFill && progressText) {
+        progressFill.style.width = '100%';
+        progressText.textContent = '100%';
+        progressText.classList.add('complete');
+    }
         
         if (loader) {
             setTimeout(() => {
