@@ -154,6 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (loader) {
             setTimeout(() => {
                 loader.classList.add('hidden');
+                document.body.classList.add('loaded');
                 setTimeout(() => {
                     loader.remove();
                 }, 300);

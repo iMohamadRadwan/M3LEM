@@ -14,6 +14,18 @@ body {
  overflow-x: hidden;
  font-display: swap;
 }
+body:not(.loaded) .navbar,
+body:not(.loaded) .hero,
+body:not(.loaded) .services,
+body:not(.loaded) .portfolio,
+body:not(.loaded) .about,
+body:not(.loaded) .contact,
+body:not(.loaded) .footer,
+body:not(.loaded) .floating-buttons,
+body:not(.loaded) .back-to-top {
+ visibility: hidden;
+ opacity: 0;
+}
 .container {
  max-width: 1200px;
  margin: 0 auto;
