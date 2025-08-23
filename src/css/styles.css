@@ -10,11 +10,12 @@ html {
 }
 
 body {
-    font-family: 'Alexandria', sans-serif;
+    font-family: 'Alexandria', 'Arial', 'Helvetica', sans-serif;
     background-color: #000000;
     color: #FFFFFF;
     line-height: 1.6;
     overflow-x: hidden;
+    font-display: swap;
 }
 
 .container {
@@ -2403,6 +2404,29 @@ section {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #0066cc;
+}
+
+/* Prevent hero container layout shifts */
+.hero-container {
+    min-height: 600px;
+    contain: layout style;
+}
+
+.hero-title {
+    font-size: 3.2rem;
+    line-height: 1.5;
+    min-height: 150px;
+    contain: layout;
+}
+
+.hero-subtitle {
+    min-height: 60px;
+    contain: layout;
+}
+
+.hero-features {
+    min-height: 200px;
+    contain: layout style;
 }
 
 /* CLS Prevention - Image Sizing */
