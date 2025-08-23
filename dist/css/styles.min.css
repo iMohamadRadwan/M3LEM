@@ -2073,7 +2073,7 @@ section {
  contain: layout style;
 }
 .hero-title {
- font-size: 3.2rem;
+ font-size: 1.75rem;
  line-height: 1.5;
  min-height: 150px;
  contain: layout;
@@ -2085,6 +2085,29 @@ section {
 .hero-features {
  min-height: 200px;
  contain: layout style;
+}
+@media (min-width: 769px) {
+ .hero-container {
+ min-height: 700px;
+ contain: layout style paint;
+ }
+ .hero-title {
+ min-height: 200px;
+ font-size: 3.2rem;
+ }
+ .hero-subtitle {
+ min-height: 80px;
+ font-size: 1.4rem;
+ }
+ .hero-features {
+ min-height: 300px;
+ }
+ .services-grid {
+ min-height: 500px;
+ }
+ .portfolio-grid {
+ min-height: 800px;
+ }
 }
 img {
  max-width: 100%;
