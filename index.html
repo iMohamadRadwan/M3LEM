@@ -25,8 +25,15 @@
     <meta name="twitter:image" content="https://m3lem.com/twitter-image.jpg">
     
     <title>M3LEM - وكالة تصميم المواقع الرقمية</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="dist/css/styles.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="dist/css/styles.min.css"></noscript>
+    <link rel="preload" href="dist/js/script.min.js" as="script">
+    
+    <!-- Fallback for browsers that don't support preload -->
+    <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'; this.onload=null;">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -80,7 +87,7 @@
         <div class="loader-content">
             <div class="loader-logo">
                 <div class="logo-wrapper">
-                    <img src="M3LEM.png" alt="M3LEM Logo" class="loader-logo-image">
+                    <img src="assets/icons/M3LEM.png" alt="M3LEM Logo" class="loader-logo-image" loading="eager">
                     <div class="logo-glow"></div>
                 </div>
             </div>
@@ -111,7 +118,7 @@
         <div class="nav-container">
             <div class="nav-logo">
                 <a href="#home" class="logo-link">
-                    <img src="M3LEM.png" alt="M3LEM Logo" class="logo-image">
+                    <img src="assets/icons/M3LEM.png" alt="M3LEM Logo" class="logo-image" loading="eager">
                 </a>
             </div>
             <ul class="nav-menu">
@@ -348,7 +355,7 @@
             <div class="portfolio-grid">
                 <div class="portfolio-item" data-category="landing">
                     <div class="portfolio-image">
-                        <img src="images/landing/MentorX_M3LEM.png" alt="منتور X">
+                        <img src="assets/images/landing/MentorX_M3LEM.png" alt="MentorX Project" class="portfolio-image" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h3>منتور X</h3>
@@ -365,7 +372,7 @@
                 </div>
                 <div class="portfolio-item" data-category="personal">
                     <div class="portfolio-image">
-                        <img src="images/websites/Main_M3LEM.png" alt="موقع M3LEM الرئيسي">
+                        <img src="assets/images/websites/Main_M3LEM.png" alt="M3LEM Main Website" class="portfolio-image" loading="lazy" decoding="async">
                         <div class="portfolio-overlay">
                             <div class="portfolio-info">
                                 <h3>موقع M3LEM الرئيسي</h3>
@@ -588,6 +595,6 @@
         </a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="dist/js/script.min.js" async></script>
 </body>
 </html>
