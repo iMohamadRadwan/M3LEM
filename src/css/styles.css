@@ -167,7 +167,7 @@ body {
 }
 
 .hero-content {
-    animation: slideInFromLeft 1s ease-out;
+    /* Animation removed */
 }
 
 .hero-badge {
@@ -213,7 +213,6 @@ body {
     display: block;
     color: #FFFFFF;
     margin-bottom: 0.5rem;
-    animation: titleSlideIn 1s ease-out 0.3s both;
     text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8), 0 2px 4px rgba(0, 0, 0, 0.6);
 }
 
@@ -224,7 +223,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     background-size: 200% 200%;
-    animation: titleSlideIn 1s ease-out 0.6s both, gradientShift 3s ease-in-out infinite;
+    animation: gradientShift 3s ease-in-out infinite;
 }
 
 .title-decoration {
@@ -234,7 +233,6 @@ body {
     border-radius: 2px;
     margin-top: 1rem;
     justify-self: center;
-    animation: decorationGrow 1s ease-out 0.9s both;
 }
 
 .hero-subtitle {
@@ -244,7 +242,6 @@ body {
     line-height: 1.6;
     max-width: 520px;
     margin-bottom: 2.5rem;
-    animation: subtitleFadeIn 1s ease-out 1.2s both;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
@@ -254,7 +251,6 @@ body {
     grid-template-rows: repeat(2, 1fr);
     gap: 1.5rem;
     margin-bottom: 2.5rem;
-    animation: featuresFadeIn 1s ease-out 1.5s both;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
@@ -322,7 +318,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    animation: ctaFadeIn 1s ease-out 1.8s both;
 }
 
 .btn-outline {
@@ -347,7 +342,6 @@ body {
 
 .hero-visual {
     position: relative;
-    animation: slideInFromRight 1s ease-out 0.6s both;
 }
 
 .visual-container {
@@ -477,7 +471,6 @@ body {
 
 .hero-image {
     text-align: center;
-    animation: slideInFromRight 1s ease-out;
 }
 
 .hero-placeholder {
@@ -1675,313 +1668,7 @@ section.visible {
 .contact-cards .contact-card:nth-child(6) { transition-delay: 0.6s; }
 
 /* Page Loading Animation */
-.page-loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at center, #001122 0%, #000000 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
-    overflow: hidden;
-    will-change: opacity, visibility;
-}
 
-.page-loader.hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}
-
-.loader-content {
-    text-align: center;
-    color: #007fff;
-    position: relative;
-    z-index: 2;
-    animation: loaderContentFadeIn 1s ease-out;
-}
-
-.loader-logo {
-    margin-bottom: 3rem;
-    position: relative;
-}
-
-.logo-wrapper {
-    position: relative;
-    display: inline-block;
-    animation: logoFloat 3s ease-in-out infinite;
-}
-
-.loader-logo-image {
-    height: 120px;
-    width: auto;
-    filter: drop-shadow(0 0 30px rgba(0, 127, 255, 0.8));
-    animation: logoGlow 2s ease-in-out infinite alternate;
-    position: relative;
-    z-index: 2;
-}
-
-.logo-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 150px;
-    height: 150px;
-    background: radial-gradient(circle, rgba(0, 127, 255, 0.3) 0%, transparent 70%);
-    border-radius: 50%;
-    animation: glowPulse 2s ease-in-out infinite;
-    z-index: 1;
-}
-
-.loader-text {
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.loading-text {
-    font-size: 1.4rem;
-    font-weight: 600;
-    color: #FFFFFF;
-    letter-spacing: 1px;
-    animation: textFadeIn 1s ease-out 0.5s both;
-}
-
-.loading-dots {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-}
-
-.dot {
-    width: 8px;
-    height: 8px;
-    background: #007fff;
-    border-radius: 50%;
-    animation: dotBounce 1.4s ease-in-out infinite;
-}
-
-.dot:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.dot:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.dot:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.loader-progress {
-    width: 300px;
-    margin: 0 auto;
-    animation: progressFadeIn 1s ease-out 1s both;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 2px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    position: relative;
-}
-
-.progress-fill {
-    height: 100%;
-    background: linear-gradient(90deg, #007fff, #00bfff, #0099ff);
-    border-radius: 2px;
-    width: 0%;
-    animation: progressFill 3s ease-out;
-    position: relative;
-}
-
-.progress-fill::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-    animation: progressShine 2s ease-in-out infinite;
-}
-
-.progress-text {
-    font-size: 1.2rem;
-    color: #007fff;
-    font-weight: 700;
-    text-align: center;
-    text-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
-    transition: all 0.3s ease;
-    letter-spacing: 0.5px;
-}
-
-.progress-text.complete {
-    color: #007fff;
-    text-shadow: 0 0 15px rgb(52, 147, 255);
-    transform: scale(1.1);
-    animation: completeGlow 0.5s ease-out;
-}
-
-@keyframes completeGlow {
-    0% {
-        transform: scale(1);
-        text-shadow: 0 0 10px rgba(0, 127, 255, 0.5);
-    }
-    50% {
-        transform: scale(1.2);
-        text-shadow: 0 0 20px rgba(0, 255, 136, 1);
-    }
-    100% {
-        transform: scale(1.1);
-        text-shadow: 0 0 15px rgba(0, 255, 136, 0.7);
-    }
-}
-
-.loader-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.bg-circle {
-    position: absolute;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0, 127, 255, 0.1) 0%, transparent 70%);
-    animation: circleFloat 20s linear infinite;
-}
-
-.circle-1 {
-    width: 300px;
-    height: 300px;
-    top: -150px;
-    right: -150px;
-    animation-duration: 25s;
-}
-
-.circle-2 {
-    width: 200px;
-    height: 200px;
-    bottom: -100px;
-    left: -100px;
-    animation-duration: 30s;
-    animation-direction: reverse;
-}
-
-.circle-3 {
-    width: 150px;
-    height: 150px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation-duration: 35s;
-    background: radial-gradient(circle, rgba(0, 191, 255, 0.08) 0%, transparent 70%);
-}
-
-@keyframes loaderContentFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes logoGlow {
-    0% {
-        filter: drop-shadow(0 0 30px rgba(0, 127, 255, 0.8));
-    }
-    100% {
-        filter: drop-shadow(0 0 50px rgba(0, 127, 255, 1));
-    }
-}
-
-@keyframes glowPulse {
-    0%, 100% {
-        opacity: 0.3;
-        transform: translate(-50%, -50%) scale(1);
-    }
-    50% {
-        opacity: 0.6;
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-}
-
-@keyframes textFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes dotBounce {
-    0%, 80%, 100% {
-        transform: scale(0.8);
-        opacity: 0.5;
-    }
-    40% {
-        transform: scale(1.2);
-        opacity: 1;
-    }
-}
-
-@keyframes progressFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes progressFill {
-    0% {
-        width: 0%;
-    }
-    100% {
-        width: 100%;
-    }
-}
-
-@keyframes progressShine {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(100%);
-    }
-}
-
-@keyframes circleFloat {
-    0% {
-        transform: rotate(0deg) translateX(50px) rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) translateX(50px) rotate(-360deg);
-    }
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {

@@ -117,49 +117,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Enhanced Page Loading Animation
-    let loadingProgress = 0;
-    const progressFill = document.querySelector('.progress-fill');
-    const progressText = document.querySelector('.progress-text');
-    
-    // Simulate loading progress
-    function updateProgress() {
-        if (loadingProgress < 100) {
-            loadingProgress += Math.random() * 15 + 5;
-            if (loadingProgress > 100) loadingProgress = 100;
-            
-            if (progressFill) {
-                progressFill.style.width = loadingProgress + '%';
-            }
-            if (progressText) {
-                progressText.textContent = Math.floor(loadingProgress) + '%';
-            }
-            
-            setTimeout(updateProgress, 100 + Math.random() * 200);
-        }
-    }
-    
-    // Start progress animation
-    setTimeout(updateProgress, 500);
-    
     window.addEventListener('load', function() {
-        const loader = document.querySelector('.page-loader');
-        
-        // Ensure progress reaches 100%
-    if (progressFill && progressText) {
-        progressFill.style.width = '100%';
-        progressText.textContent = '100%';
-        progressText.classList.add('complete');
-    }
-        
-        if (loader) {
-            setTimeout(() => {
-                loader.classList.add('hidden');
-                setTimeout(() => {
-                    loader.remove();
-                }, 800);
-            }, 1500);
-        }
-        
         // Animate hero section immediately
         const heroSection = document.querySelector('.hero');
         if (heroSection) {
@@ -391,18 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth reveal animation for elements
-    const revealElements = document.querySelectorAll('.hero-content, .hero-image');
-    revealElements.forEach((element, index) => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(30px)';
-        
-        setTimeout(() => {
-            element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
-        }, index * 200);
-    });
+    // Hero reveal animations removed
 
     // Loading animation
     window.addEventListener('load', function() {
