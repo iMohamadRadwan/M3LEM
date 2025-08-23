@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Simulate loading progress
     function updateProgress() {
         if (loadingProgress < 100) {
-            loadingProgress += Math.random() * 15 + 5;
+            loadingProgress += Math.random() * 25 + 15;
             if (loadingProgress > 100) loadingProgress = 100;
             
             if (progressFill) {
@@ -134,12 +134,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 progressText.textContent = Math.floor(loadingProgress) + '%';
             }
             
-            setTimeout(updateProgress, 100 + Math.random() * 200);
+            setTimeout(updateProgress, 30 + Math.random() * 50);
         }
     }
     
     // Start progress animation
-    setTimeout(updateProgress, 500);
+    setTimeout(updateProgress, 100);
     
     window.addEventListener('load', function() {
         const loader = document.querySelector('.page-loader');
@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 loader.classList.add('hidden');
                 setTimeout(() => {
                     loader.remove();
-                }, 800);
-            }, 1500);
+                }, 300);
+            }, 300);
         }
         
         // Animate hero section immediately
