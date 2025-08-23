@@ -36,7 +36,27 @@
     <!-- Preload critical font files -->
     <link rel="preload" href="https://fonts.gstatic.com/s/alexandria/v5/UMBXrPdOqHqadGJKdnxQErvR.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="https://fonts.gstatic.com/s/alexandria/v5/UMBXrPdOqHqadGJKdnxQErfR.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Additional font weights for desktop -->
+    <link rel="preload" href="https://fonts.gstatic.com/s/alexandria/v5/UMBXrPdOqHqadGJKdnxQEr_R.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://fonts.gstatic.com/s/alexandria/v5/UMBXrPdOqHqadGJKdnxQErbR.woff2" as="font" type="font/woff2" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font loading optimization -->
+    <style>
+        @font-face {
+            font-family: 'Alexandria';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/alexandria/v5/UMBXrPdOqHqadGJKdnxQErvR.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Alexandria';
+            font-style: normal;
+            font-weight: 600;
+            font-display: swap;
+            src: url('https://fonts.gstatic.com/s/alexandria/v5/UMBXrPdOqHqadGJKdnxQErfR.woff2') format('woff2');
+        }
+    </style>
     
     <!-- Structured Data -->
     <script type="application/ld+json">
